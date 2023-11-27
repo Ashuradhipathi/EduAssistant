@@ -179,6 +179,8 @@ with mcq_tab:
                 score += 1
 
         st.write(f"\nYour score: {score}/{len(questions_list)}")
+
+        st.markdown('## Correct Answers')
         for i, answer in enumerate(correct_answers):
             st.write(f'Q{i+1} : {answer}')
 
