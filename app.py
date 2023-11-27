@@ -34,11 +34,8 @@ def init_index(documents, llm_name, model_temperature, api_key):
     return temp_index
 
 def extract_terms(documents, term_extract_str, llm_name, model_temperature, api_key):
-    if st.session_state['temp_index']:
-        query_engine = st.session_state['temp_index'].as_query_engine(response_mode="tree_summarize")
-    else:
-        st.session_state['temp_index'] = init_index(documents, llm_name, model_temperature, api_key)
-        query_engine = st.session_state['temp_index'].as_query_engine(response_mode="tree_summarize")
+    st.session_state['temp_index'] = init_index(documents, llm_name, model_temperature, api_key)
+    query_engine = st.session_state['temp_index'].as_query_engine(response_mode="tree_summarize")
 
 
     terms_definitions = str(query_engine.query(term_extract_str))
