@@ -179,10 +179,8 @@ with mcq_tab:
                 score += 1
 
         st.write(f"\nYour score: {score}/{len(questions_list)}")
-
-        if st.button("Show Answers"):
-            for i, answer in enumerate(correct_answers):
-                st.write(f'Q{i+1} : {answer}')
+        for i, answer in enumerate(correct_answers):
+            st.write(f'Q{i+1} : {answer}')
 
     else:
         st.markdown('## Go Back and generate summary and read it')
