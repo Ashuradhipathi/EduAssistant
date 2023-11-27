@@ -11,10 +11,19 @@ DEFAULT_MCQ_STR = (
     "formulate three question that captures an important fact from the "
     "context. Restrict the question to the context information provided."
     "Also Generate three options for each question, out of which only one is correct"
-    "Please do specify the right answer also"
-    "Each question should be seperated by a two line breaks'/n' "
-    "Each option should be seperated by a single line break '/n' "
-    "Answer should be specified as Answer: <option index>. <option> like 'Answer: a. To control the flight of rockets'  in a seperate line"
+    "Please do specify the right answer also in the format"
+    """Q1. What is the purpose of a rocket? 
+    a. To control the flight of rockets 
+    b. To accelerate without using the surrounding air 
+    c. To generate large accelerations 
+    Answer: b. To accelerate without using the surrounding air
+
+    Q2. What is the advantage of rockets compared to airbreathing engines? 
+    a. They are lightweight and powerful 
+    b. They are capable of generating large accelerations 
+    c. They are capable of attaining escape velocity from Earth 
+    Answer: a. They are lightweight and powerful"""
+    ""
     
 )
 

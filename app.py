@@ -150,7 +150,7 @@ with summary_tab:
         st.markdown(response)
         
 with mcq_tab:
-    if st.button("Gnerate"):
+    if st.session_state['temp_index'] and st.button("Generate"):
         query_engine = st.session_state['temp_index'].as_query_engine(response_mode="tree_summarize")
         mcq = str(query_engine.query(DEFAULT_MCQ_STR))
         questions_list = generate_questions(mcq)
